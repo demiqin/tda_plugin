@@ -4,7 +4,7 @@ MAINTAINER Deepak Roy Chittajallu <deepak.chittajallu@kitware.com>
 # Insert commands to install any system pre-requisites and libraries here
 
 # Copy files of the plugin into the docker container
-ENV SLICER_CLI_WEB_PLUGIN_PATH /opt/tda_plugin
+ENV SLICER_CLI_WEB_PLUGIN_PATH /Users/demi/repos/tda_plugin
 COPY . $SLICER_CLI_WEB_PLUGIN_PATH
 WORKDIR $SLICER_CLI_WEB_PLUGIN_PATH/Applications
 
