@@ -1,11 +1,12 @@
-FROM girder/slicer_cli_web
+﻿FROM girder/slicer_cli_web
 MAINTAINER Deepak Roy Chittajallu <deepak.chittajallu@kitware.com>
 
 # Insert commands to install any system pre-requisites and libraries here
 
 # Copy files of the plugin into the docker container
-ENV SLICER_CLI_WEB_PLUGIN_PATH /Users/demi/repos/tda_plugin
+ENV SLICER_CLI_WEB_PLUGIN_PATH /opt/tda_plugin
 COPY . $SLICER_CLI_WEB_PLUGIN_PATH
+COPY requirements.txt /opt/tda_plugin/Applications
 WORKDIR $SLICER_CLI_WEB_PLUGIN_PATH/Applications
 
 # pip install python package dependencies in requirments.txt
