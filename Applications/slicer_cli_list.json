@@ -5,5 +5,8 @@
 
   "sample_cpp_cli": {
     "type"    : "cxx"
+  },
+    "tda_python_cli": {
+    "type"    : "cxx"
   }
 }
