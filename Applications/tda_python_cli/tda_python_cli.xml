@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <executable>
   <category>Developer Tools</category>
-  <title>sample_python_cli</title>
-  <description><![CDATA[Sample slicer CLI in Python that shows one of each type of parameter.]]></description>
+  <title>tda_python_cli</title>
+  <description><![CDATA[TDA slicer CLI in Python that shows one of each type of parameter.]]></description>
   <version>0.1.0.$Revision$(alpha)</version>
   <documentation-url>http://wiki.slicer.org/slicerWiki/index.php/Documentation/Nightly/Modules/ExecutionModelTour</documentation-url>
   <license/>
-  <contributor>Deepak Roy Chittajallu (Kitware)</contributor>
+  <contributor>Demi Qin</contributor>
   <acknowledgements><![CDATA[This work is part of the National Alliance for Medical Image Computing (NAMIC), funded by the National Institutes of Health through the NIH Roadmap for Medical Research, Grant U54 EB005149.]]></acknowledgements>
   <parameters>
     <label>Scalar Parameters</label>
