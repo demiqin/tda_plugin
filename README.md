@@ -55,3 +55,9 @@ $ docker run cdeepakroy/slicer_cli_web_plugin sample_python_cli --help
 
 Slicer-cli-web runs `docker run <image-name> --list_cli` to find the CLI's exposed, runs `docker run <image-name> <cli-rel-path> --xml` for each CLI to get its XML spec, automatically converts the XML spec into girder-worker task-spec to generate REST end-points and web UI.
 
+## Troubleshoot
+1. For usage #5, if it shows `/build/miniconda/lib/python2.7/argparse.py:2279: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+if action.choices is not None and value not in action.choices:
+usage: cli_list_entrypoint.py [-h] [--list_cli] <cli>
+cli_list_entrypoint.py: error: argument <cli>: invalid choice: '\xe2\x80\x94list_cli' (choose from u'sample_cpp_cli', u'tda_python_cli', u'sample_python_cli')`
+
