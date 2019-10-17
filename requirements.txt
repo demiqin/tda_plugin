@@ -1,6 +1,6 @@
 numpy==1.16.4
 scipy==0.16.1
 pandas==0.23.0
+scikit-tda
 Cython
-ripser
-persim
+

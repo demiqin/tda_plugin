@@ -10,8 +10,9 @@ COPY requirements.txt /opt/tda_plugin/Applications
 WORKDIR $SLICER_CLI_WEB_PLUGIN_PATH/Applications
 
 # pip install python package dependencies in requirments.txt
-RUN pip install --upgrade pip
-RUN pip install -U -r requirements.txt
+RUN apt install python3-pip
+RUN pip3 install --upgrade pip
+RUN pip3 install -U -r requirements.txt
 
 # Build C++ CLIs (Skip if you don't have C++ CLIs)
 RUN mkdir -p build && cd build && \

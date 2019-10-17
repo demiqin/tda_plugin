@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+
 from ripser import ripser
 from persim import plot_diagrams
 
