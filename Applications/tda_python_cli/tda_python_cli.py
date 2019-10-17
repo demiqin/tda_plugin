@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.CRITICAL)
 
 from ctk_cli import CLIArgumentParser
 
-def compute_PD_features(im_label):
+def main(args):
 
     feature_list = []
 
@@ -35,12 +35,12 @@ plt.title("Rips Persistence Diagrams")
 plt.tight_layout()
 plt.show()
     
-    data_test = np.random.random((100,2))
-    data = im_label
+    # data_test = np.random.random((100,2))
+    #data = im_label
 
-    fdata = pd.concat(feature_list, axis=1)
+    #fdata = pd.concat(feature_list, axis=1)
 
-    print fdata
+#print fdata
 
 
 if __name__ == "__main__":

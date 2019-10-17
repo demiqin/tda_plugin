@@ -12,7 +12,7 @@ In the requirements.txt file,  we need to define the library version under Pytho
 3. Access HistomicsTK Docker image ```  $ docker exec -it histomicstk_histomicstk bash```
 4. Pull new Docker image from Dockerhub ```$ docker pull demiqin/tda_plugin:version-1.0```
 5. Generate new Docker image to HistomicsTK web-API
-```$docker run demiqin/tda_plugin:version-1.0 —list_cli```
+```$docker run demiqin/tda_plugin:version-1.0 —-list_cli```
 ```
 $docker run demiqin/tda_plugin:version-1.0 [cliname] --xml 
 ```
