@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-
+import sktda
 
 from ripser import ripser
 from persim import plot_diagrams
