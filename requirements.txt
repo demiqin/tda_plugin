@@ -1,7 +1,10 @@
 numpy
 scipy
 pandas
+matplotlib.pyplot
+cechmate
+persim
+tadasets
 Cython
-scikit-tda
-ripser
+
 
