@@ -23,6 +23,11 @@ Python3 deploy_docker.py start
 ```
 7. Access localhost:8080 and open Web-API, in the PUT /HistomicsTK/HistomicsTK/docker_image endpoint, you can add a list of Docker images, such as ["dsarchive/histomicstk:latest"], and then click “Try it out”. 
 
+## Libraries
+To compute persistent homology and corrspondes persistence image of input image, we use the scikit-TDA which is a complete suite of TDA Python tools. The main library we used is CechMate. This library provides easy to use constructors for custom filtrations that are suitable for use with Phat. Phat currently provides a clean interface for persistence reduction algorithms for boundary matrics. 
+
+Check out complete documentation for CechMate at [CechMate document](https://cechmate.scikit-tda.org/).
+
 ## Notes
 Running `docker run <image-name> --list_cli` will output the list of all CLIs (their relative path and type/language) exposed.
 
