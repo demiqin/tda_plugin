@@ -9,6 +9,11 @@ COPY . $SLICER_CLI_WEB_PLUGIN_PATH
 COPY requirements.txt /opt/tda_plugin/Applications
 WORKDIR $SLICER_CLI_WEB_PLUGIN_PATH/Applications
 
+# set up Python 3
+RUN apt-get install python3 && \
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+RUN python3 get-pip.py.
+
 # pip install python package dependencies in requirments.txt
 RUN apt-get update 
 RUN apt-get -y install python3-pip
