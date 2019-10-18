@@ -2,6 +2,10 @@
 MAINTAINER Deepak Roy Chittajallu <deepak.chittajallu@kitware.com>
 
 # Insert commands to install any system pre-requisites and libraries here
+# set up Python 3
+RUN apt-get install python3 && \
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+RUN python3 get-pip.py.
 
 # Copy files of the plugin into the docker container
 ENV SLICER_CLI_WEB_PLUGIN_PATH /opt/tda_plugin
@@ -9,10 +13,6 @@ COPY . $SLICER_CLI_WEB_PLUGIN_PATH
 COPY requirements.txt /opt/tda_plugin/Applications
 WORKDIR $SLICER_CLI_WEB_PLUGIN_PATH/Applications
 
-# set up Python 3
-RUN apt-get install python3 && \
-RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-RUN python3 get-pip.py.
 
 # pip install python package dependencies in requirments.txt
 RUN apt-get update 
