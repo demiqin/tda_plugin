@@ -3,7 +3,8 @@ MAINTAINER Deepak Roy Chittajallu <deepak.chittajallu@kitware.com>
 
 # Insert commands to install any system pre-requisites and libraries here
 # set up Python 3
-RUN apt-get install python3 && \
+RUN apt-get update && \
+RUN apt-get install python3.6 && \
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 RUN python3 get-pip.py.
 
