@@ -19,4 +19,4 @@ RUN pip3 install --upgrade pip
 RUN pip3 install -U -r requirements.txt
 
 # use entrypoint of slicer_cli_web to expose slicer CLIS of this plugin on web
-ENTRYPOINT ["/build/miniconda/bin/python", "/build/slicer_cli_web/server/cli_list_entrypoint.py"]
+ENTRYPOINT ["/build/miniconda/bin/python3", "/build/slicer_cli_web/server/cli_list_entrypoint.py"]
