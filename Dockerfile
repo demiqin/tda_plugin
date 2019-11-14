@@ -23,12 +23,6 @@ COPY . $SLICER_CLI_WEB_PLUGIN_PATH
 COPY requirements.txt /opt/tda_plugin/Applications
 WORKDIR $SLICER_CLI_WEB_PLUGIN_PATH/Applications
 
-# Insert commands to install any system pre-requisites and libraries here
-# set up Python 3
-RUN apt-get update 
-RUN apt-get install -y python3.5
-RUN apt-get -y install python3-pip
-RUN pip3 install --upgrade pip
 
 # define entrypoint through which all CLIs can be run
 WORKDIR $htk_path/histomicstk/cli
