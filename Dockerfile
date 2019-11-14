@@ -29,6 +29,6 @@ WORKDIR $htk_path/histomicstk/cli
 #RUN python /build/slicer_cli_web/server/cli_list_entrypoint.py --list_cli
 #RUN python /build/slicer_cli_web/server/cli_list_entrypoint.py ColorDeconvolution --help
 
-ENTRYPOINT ["/bin/bash", "docker-entrypoint.sh"]
+#ENTRYPOINT ["/bin/bash", "docker-entrypoint.sh"]
 # use entrypoint of slicer_cli_web to expose slicer CLIS of this plugin on web
-#ENTRYPOINT ["/build/miniconda/bin/python", "/build/slicer_cli_web/server/cli_list_entrypoint.py"]
+ENTRYPOINT ["/build/miniconda/bin/python", "/build/slicer_cli_web/server/cli_list_entrypoint.py"]
