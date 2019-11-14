@@ -8,9 +8,6 @@ RUN mkdir -p $htk_path
 # Insert commands to install any system pre-requisites and libraries here
 # set up Python 3
 RUN apt-get update 
-RUN apt-get install -y python3 && \
-RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-RUN python3 get-pip.py.
 
 # git clone install slicer_cli_web
 RUN mkdir -p /build && \
