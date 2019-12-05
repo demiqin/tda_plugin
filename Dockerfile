@@ -13,16 +13,13 @@ RUN apt-get update
 RUN mkdir -p /build && \
     cd /build && \
     git clone --branch 2.x-maintenance https://github.com/girder/slicer_cli_web.git
-
+# define entrypoint through which all CLIs can be run
+WORKDIR $htk_path/histomicstk/cli
 # Copy files of the plugin into the docker container
 ENV SLICER_CLI_WEB_PLUGIN_PATH /opt/tda_plugin
 COPY . $SLICER_CLI_WEB_PLUGIN_PATH
 COPY requirements.txt /opt/tda_plugin/Applications
 WORKDIR $SLICER_CLI_WEB_PLUGIN_PATH/Applications
-
-
-# define entrypoint through which all CLIs can be run
-WORKDIR $htk_path/histomicstk/cli
 
 # Test our entrypoint.  If we have incompatible versions of numpy and
 # openslide, one of these will fail
